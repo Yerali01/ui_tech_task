@@ -32,19 +32,23 @@ class DesktopUi extends StatelessWidget {
             ),
           ),
         ],
-        leading: const Icon(
-          Icons.settings,
-          color: Colors.white,
-          size: 30,
+        leading: Padding(
+          padding: EdgeInsets.only(left: 16),
+          child: const Icon(
+            Icons.settings,
+            color: Colors.white,
+            size: 30,
+          ),
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 12).copyWith(top: 20),
         child: SingleChildScrollView(
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
                 child: TextFormField(
                   decoration: const InputDecoration(
                     hintText: "Поиск",

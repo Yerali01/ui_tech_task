@@ -32,19 +32,23 @@ class MobileUi extends StatelessWidget {
             ),
           ),
         ],
-        leading: const Icon(
-          Icons.settings,
-          color: Colors.white,
-          size: 30,
+        leading: const Padding(
+          padding: EdgeInsets.only(left: 16),
+          child: Icon(
+            Icons.settings,
+            color: Colors.white,
+            size: 30,
+          ),
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 13).copyWith(top: 20),
         child: SingleChildScrollView(
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
                 child: TextFormField(
                   decoration: const InputDecoration(
                     hintText: "Поиск",
@@ -90,7 +94,7 @@ class MobileUi extends StatelessWidget {
                             ),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(12.0),
+                            padding: const EdgeInsets.all(12),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.start,
